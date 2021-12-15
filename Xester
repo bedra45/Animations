@@ -1,6 +1,12 @@
-local function DamageFling(Part)
-pcall(function()
-local flingPart = getgenv().FlingPart
+local function DamageFling(Main)
+local Part
+if Main:IsA("Part") then
+     Part = Main
+else
+Part = Main.PrimaryPart
+  end
+
+local flingPart = getgenv().RealFlingPart
 
 local time2 = tick()
 
@@ -8,9 +14,9 @@ while task.wait() do
 if (tick() - time2) > 5 then 
     break
 end
-flingPart.Position = Part.Position
+flingPart.Position = Part.Position + Vector3.new(0,0,0)
 end
-end)
+
 end
 
 local Player=game:GetService("Players").LocalPlayer
