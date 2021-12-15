@@ -545,6 +545,7 @@ BLADE.Transparency = 1
 local athp = Instance.new("Attachment",BLADE)
 local atho = Instance.new("Attachment",BLADE)
 
+
 function Align(na1 , na2, position , ore)
     local AlignPos = Instance.new("AlignPosition",na1)
     local AlignOre = Instance.new("AlignOrientation",na1)
@@ -575,8 +576,10 @@ BodyForce.Force = Vector3.new(80,80,80)
 end)
 end
 
+pcall(function()
 game.Players.LocalPlayer.Character["MeshPartAccessory"].Handle:BreakJoints()
 Align(game.Players.LocalPlayer.Character["MeshPartAccessory"].Handle, game.Players.LocalPlayer.Character.Dummy.Effects.Abyssal_Sword, Vector3.new(0,0,0), Vector3.new(-50, -160, -120))
+end)
 
 local SKILLTEXTCOLOR = C3(0,0,0)
 local SKILLFONT = "Fantasy"
