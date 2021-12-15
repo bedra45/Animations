@@ -1,3 +1,18 @@
+local function DamageFling(Part)
+pcall(function()
+local flingPart = getgenv().FlingPart
+
+local time2 = tick()
+
+while task.wait() do 
+if (tick() - time2) > 5 then 
+    break
+end
+flingPart.Position = Part.Position
+end
+end)
+end
+
 local Player=game:GetService("Players").LocalPlayer
 local Character=getgenv().activeDummy
 local hum = Character.Humanoid
