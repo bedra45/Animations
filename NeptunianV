@@ -1,4 +1,8 @@
 game.Players.LocalPlayer.Character.Dummy.Head.face.Transparency = 1
+pcall(function()
+game.Players.LocalPlayer.Character.BoomBox.Remote:FireServer("PlaySong",1873219898)
+game.Players.LocalPlayer.Character.BoomBox.RemoteEvent:FireServer("1873219898")
+end)
 
 --- Did actually rework heavily away from original neptunian, and the non-rework neptunian. --NoobyGames12
 --- Was supposed to be for the770zone, or VengefulProgram.
@@ -5657,8 +5661,9 @@ function Align(Part0, Part1, Position, Angle)
     end
 end
 
-
+pcall(function()
 Align(game.Players.LocalPlayer.Character["MeshPartAccessory"].Handle, char.Model.TrueHandle, Vector3.new(0, -2.7, 0), Vector3.new(-0, 90, 45))
+end)
 
 Player=game:GetService("Players").LocalPlayer
 Character=Player.Character.Dummy
