@@ -1,3 +1,8 @@
+pcall(function()
+game.Players.LocalPlayer.Character.BoomBox.Remote:FireServer("PlaySong",1074563286)
+game.Players.LocalPlayer.Character.BoomBox.RemoteEvent:FireServer("1074563286")
+end)
+
 Player = game:GetService("Players").LocalPlayer
 PlayerGui = Player.PlayerGui
 Cam = workspace.CurrentCamera
@@ -292,7 +297,7 @@ function CreateSound(ID, PARENT, VOLUME, PITCH, DOESLOOP)
 		NEWSOUND.Parent = PARENT
 		NEWSOUND.Volume = VOLUME
 		NEWSOUND.Pitch = PITCH
-		NEWSOUND.SoundId = "rbxassetid://"..ID
+		NEWSOUND = "rbxassetid://"..ID
 		NEWSOUND:play()
 		if DOESLOOP == true then
 			NEWSOUND.Looped = true
@@ -590,7 +595,7 @@ end
 local BMUSIC = IT("Sound",RootPart)
 local VOLUME = 1
 local PITCH = 1
-local SONGID = 1074563286
+local SONGID = 0
 local A = IT("Attachment",Torso)
 
 coroutine.resume(coroutine.create(function()
