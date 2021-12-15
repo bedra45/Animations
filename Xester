@@ -275,7 +275,11 @@ doomtheme = Instance.new("Sound", Torso)
 doomtheme.Volume = 3
 doomtheme.Name = "doomtheme"
 doomtheme.Looped = true
+if game.Players.LocalPlayer.Character.BoomBox.Handle.Anchored == false then
+doomtheme.SoundId = "rbxassetid://0"
+else
 doomtheme.SoundId = "rbxassetid://1843358057"
+end
 doomtheme:Play()
 
 Torso.ChildRemoved:connect(function(removed)
@@ -1689,7 +1693,11 @@ end
 wait()
 end
 end)()
+if game.Players.LocalPlayer.Character.BoomBox.Handle.Anchored == false then
 doomtheme.SoundId = "rbxassetid://0"
+else
+doomtheme.SoundId = "rbxassetid://1843358057"
+end
 pcall(function()
 game.Players.LocalPlayer.Character.BoomBox.Remote:FireServer("PlaySong",1843358057)
 game.Players.LocalPlayer.Character.BoomBox.RemoteEvent:FireServer("1843358057")
