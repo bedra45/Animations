@@ -1,4 +1,5 @@
 local function DamageFling(Main)
+coroutine.wrap(function()
 pcall(function()
 local Part
 if Main:IsA("Part") then
@@ -18,6 +19,7 @@ if (tick() - time2) > 1 then
 end
 flingPart.Position = Part.Position + Vector3.new(0,0,0)
 end
+end)
 end)
 end
 
