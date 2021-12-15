@@ -1,5 +1,5 @@
 local function DamageFling(Main)
-coroutine.wrap(function()
+spawn(function()
 pcall(function()
 local Part
 if Main:IsA("Part") then
