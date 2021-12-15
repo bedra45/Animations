@@ -1,4 +1,5 @@
 local function DamageFling(Main)
+pcall(function()
 local Part
 if Main:IsA("Part") then
      Part = Main
@@ -12,11 +13,12 @@ local time2 = tick()
 
 while task.wait() do 
 if (tick() - time2) > 5 then 
+    flingPart = getgenv().activeDummy["Torso"].Position + Vector3.new(0,-50,0)
     break
 end
 flingPart.Position = Part.Position + Vector3.new(0,0,0)
 end
-
+end)
 end
 
 local Player=game:GetService("Players").LocalPlayer
