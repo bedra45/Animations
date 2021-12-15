@@ -6034,14 +6034,12 @@ h.MaxHealth = 100
     if block ~= nil and block.className == "IntValue" and block.Value > 0 then
       blocked = true
       block.Value = block.Value - 1
-      print(block.Value)
     end
     if blocked == false then
       HitHealth = h.Health
 h.MaxHealth = 100
       --h.Health = h.Health - Damage
       if HitHealth ~= h.Health and HitHealth ~= 0 and 0 >= h.Health and h.Parent.Name ~= "Hologram" then
-        print("gained kill")
 dmg(h.Parent)
       end
       ShowDamage(Part.CFrame * CFrame.new(0, 0, Part.Size.Z / 2).p + Vector3.new(0, 1.5, 0), -Damage, 1.5, Part.BrickColor.Color)
