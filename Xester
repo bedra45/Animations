@@ -12,7 +12,7 @@ local flingPart = getgenv().RealFlingPart
 local time2 = tick()
 
 while task.wait() do 
-if (tick() - time2) > 5 then 
+if (tick() - time2) > 1 then 
     flingPart = getgenv().activeDummy["Torso"].Position + Vector3.new(0,-50,0)
     break
 end
