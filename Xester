@@ -1,5 +1,5 @@
 local Player=game:GetService("Players").LocalPlayer
-local Character=Player.Character.Dummy
+local Character=game.Camera.CameraSubject.Parent
 local hum = Character.Humanoid
 local LeftArm=Character["Left Arm"]
 local LeftLeg=Character["Left Leg"]
