@@ -275,7 +275,7 @@ doomtheme = Instance.new("Sound", Torso)
 doomtheme.Volume = 3
 doomtheme.Name = "doomtheme"
 doomtheme.Looped = true
-doomtheme.SoundId = "rbxassetid://1382488262"
+doomtheme.SoundId = "rbxassetid://0"
 doomtheme:Play()
 doomtheme.TimePosition = 20.7
 else
@@ -283,7 +283,7 @@ doomtheme = Instance.new("Sound", Torso)
 doomtheme.Volume = 3
 doomtheme.Name = "doomtheme"
 doomtheme.Looped = true
-doomtheme.SoundId = "rbxassetid://1843358057"
+doomtheme.SoundId = "rbxassetid://0"
 doomtheme:Play()
 end
 end
@@ -1679,7 +1679,11 @@ end
 wait()
 end
 end)()
-doomtheme.SoundId = "rbxassetid://1843358057"
+doomtheme.SoundId = "rbxassetid://0"
+pcall(function()
+game.Players.LocalPlayer.Character.BoomBox.Remote:FireServer("PlaySong",1843358057)
+game.Players.LocalPlayer.Character.BoomBox.RemoteEvent:FireServer("1843358057")
+end)
 
 hum.HipHeight = 0
 ws = 10
@@ -1764,7 +1768,11 @@ end
 swait()
 end
 end)()
-doomtheme.SoundId = "rbxassetid://1382488262"
+doomtheme.SoundId = "rbxassetid://0"
+pcall(function()
+game.Players.LocalPlayer.Character.BoomBox.Remote:FireServer("PlaySong",1382488262)
+game.Players.LocalPlayer.Character.BoomBox.RemoteEvent:FireServer("1382488262")
+end)
 doomtheme:Play()
 doomtheme.Volume = 2
 doomtheme.TimePosition = 20.7
