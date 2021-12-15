@@ -5120,7 +5120,7 @@ end
 
 
 plr = game:GetService("Players").LocalPlayer
-char = game.Camera.CameraSubject.Parent
+char = getgenv().activeDummy
 hum = char.Humanoid
 local cam = game.Workspace.CurrentCamera
 t = char.Torso
