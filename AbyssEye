@@ -1,6 +1,7 @@
 pcall(function()
 game.Players.LocalPlayer.Character.BoomBox.Remote:FireServer("PlaySong",1074563286)
 game.Players.LocalPlayer.Character.BoomBox.RemoteEvent:FireServer("1074563286")
+game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.Volume = 0
 end)
 
 Player = game:GetService("Players").LocalPlayer
@@ -598,7 +599,7 @@ end
 local BMUSIC = IT("Sound",RootPart)
 local VOLUME = 1
 local PITCH = 1
-local SONGID = 0
+local SONGID = 1074563286
 local A = IT("Attachment",Torso)
 
 coroutine.resume(coroutine.create(function()
