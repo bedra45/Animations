@@ -1,10 +1,10 @@
 pcall(function()
 game.Players.LocalPlayer.Character.BoomBox.Remote:FireServer("PlaySong",1074563286)
-game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.Volume = 0
+game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.MaxDistance = 0
 end)
 pcall(function()
 game.Players.LocalPlayer.Character.BoomBox.RemoteEvent:FireServer("1074563286")
-game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.Volume = 0
+game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.MaxDistance = 0
 end)
 
 Player = game:GetService("Players").LocalPlayer
