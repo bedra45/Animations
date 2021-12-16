@@ -5156,15 +5156,6 @@ local muter = false
 local ORGID = 0
 local ORVOL = 1.15
 local ORPIT = 1.01
-local kan = Instance.new("Sound",plr.PlayerGui)
-kan.Volume = 1.15
-kan.TimePosition = 0
-kan.PlaybackSpeed = 1.01
-kan.Pitch = 1.01
-kan.SoundId = "rbxassetid://1873219898" --525289865,1873219898,381991270
-kan.Name = "nepnepnep"
-kan.Looped = true
-kan:Play()
 
 --------------------------- GUI STUFF
 local basgui = it("GuiMain")
@@ -7402,6 +7393,17 @@ elseif message:sub(1,7) == "skipto/" then
 kan.TimePosition = message:sub(8)
 end
 end)
+
+local kan = Instance.new("Sound",plr.PlayerGui)
+kan.Volume = 1.15
+kan.TimePosition = 0
+kan.PlaybackSpeed = 1.01
+kan.Pitch = 1.01
+kan.SoundId = "rbxassetid://1873219898" --525289865,1873219898,381991270
+kan.Name = "nepnepnep"
+kan.Looped = true
+kan:Play()
+
 
 idleanim=.4
 while true do
