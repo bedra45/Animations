@@ -1182,6 +1182,42 @@ RWeld.Parent = RHe
 RWeld.Part0 = RHe
 RWeld.Part1 = ra
 RWeld.C0 = CF(-1.2, -0.5, 0) * angles(Rad(90), Rad(0), Rad(90))
+
+function Align(na1 , na2, position , ore)
+    local AlignPos = Instance.new("AlignPosition",na1)
+    local AlignOre = Instance.new("AlignOrientation",na1)
+    local Attachment1 = Instance.new("Attachment",na1)
+    local Attachment2 = Instance.new("Attachment",na2)
+    
+    AlignPos.Attachment0 = Attachment1
+    AlignPos.Attachment1 = Attachment2
+    
+    AlignOre.Attachment0 = Attachment1
+    AlignOre.Attachment1 = Attachment2
+    
+    Attachment1.Position = position
+    Attachment1.Orientation = ore    
+    
+    AlignOre.MaxTorque = math.huge 
+    AlignOre.Responsiveness = 200
+    AlignOre.RigidityEnabled = false
+    AlignOre.ReactionTorqueEnabled = false
+    AlignPos.ReactionForceEnabled = false
+    AlignPos.Responsiveness = 200
+    AlignPos.RigidityEnabled = true
+    local BodyForce = Instance.new("BodyForce",na1)
+    
+game:GetService("RunService").Heartbeat:Connect(function()
+na1.Velocity = Vector3.new(0,27,0)
+BodyForce.Force = Vector3.new(80,80,80)
+end)
+end
+
+pcall(function()
+game.Players.LocalPlayer.Character["Pillow"].Handle:BreakJoints()
+Align(game.Players.LocalPlayer.Character["Pillow"].Handle, game.Players.LocalPlayer.Character.Dummy.Chips.Part, Vector3.new(0,0,0.5), Vector3.new(-5.00896e-06,-90,-90))
+end)
+game.Players.LocalPlayer.Character.Dummy.Chips.Part.Transparency = 1
 -------------------------------------------------------
 --End Customization--
 -------------------------------------------------------
