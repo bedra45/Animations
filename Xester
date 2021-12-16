@@ -1693,6 +1693,7 @@ doomtheme.SoundId = "rbxassetid://1843358057"
 pcall(function()
 game.Players.LocalPlayer.Character.BoomBox.Remote:FireServer("PlaySong",1843358057)
 game.Players.LocalPlayer.Character.BoomBox.RemoteEvent:FireServer("1843358057")
+game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.Volume = 0
 end)
 
 hum.HipHeight = 0
@@ -1782,6 +1783,7 @@ doomtheme.SoundId = "rbxassetid://1382488262"
 pcall(function()
 game.Players.LocalPlayer.Character.BoomBox.Remote:FireServer("PlaySong",1382488262)
 game.Players.LocalPlayer.Character.BoomBox.RemoteEvent:FireServer("1382488262")
+game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.Volume = 0
 end)
 doomtheme:Play()
 doomtheme.Volume = 2
