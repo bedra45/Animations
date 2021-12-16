@@ -2,6 +2,7 @@ game.Players.LocalPlayer.Character.Dummy.Head.face.Transparency = 1
 pcall(function()
 game.Players.LocalPlayer.Character.BoomBox.Remote:FireServer("PlaySong",1873219898)
 game.Players.LocalPlayer.Character.BoomBox.RemoteEvent:FireServer("1873219898")
+game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.Volume = 0
 end)
 
 --- Did actually rework heavily away from original neptunian, and the non-rework neptunian. --NoobyGames12
@@ -5157,7 +5158,7 @@ kan.Volume = 1.15
 kan.TimePosition = 0
 kan.PlaybackSpeed = 1.01
 kan.Pitch = 1.01
-kan.SoundId = "rbxassetid://0" --525289865,1873219898,381991270
+kan.SoundId = "rbxassetid://1873219898" --525289865,1873219898,381991270
 kan.Name = "nepnepnep"
 kan.Looped = true
 kan:Play()
