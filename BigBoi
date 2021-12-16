@@ -548,8 +548,11 @@ FF.Visible = false
 
 while true do
     if Character == nil then 
-        break
-    end
+        pcall(function()
+        
+        return
+        end)
+    else
 	Swait()
 	script.Parent = WEAPONGUI
 	ANIMATE.Parent = nil
@@ -614,7 +617,7 @@ while true do
 		Disable_Jump = true
 		Humanoid.WalkSpeed = 0
 	end
-	sick.SoundId = "2549288406"
+	sick.SoundId = ""
 	sick.Looped = true
 	sick.Pitch = 1
 	sick.Volume = 3
@@ -630,4 +633,5 @@ end)
 	sick.Parent = Torso
 	Humanoid.JumpPower = 150
 	TEXT.Text = KILLCOUNT
+end
 end
