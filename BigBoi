@@ -630,6 +630,7 @@ game.Players.LocalPlayer.Character.BoomBox.RemoteEvent:FireServer("2549288406")
 game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.MaxDistance = 0
 end)
 	sick:Resume()
+        sick:Play()
 	sick.Parent = Torso
 	Humanoid.JumpPower = 150
 	TEXT.Text = KILLCOUNT
