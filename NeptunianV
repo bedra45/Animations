@@ -1,4 +1,23 @@
-game.Players.LocalPlayer.Character.Dummy.Head.face.Transparency = 1
+local kan = Instance.new("Sound",game.Players.LocalPlayer.Character.HumanoidRootPart)
+kan.Volume = 1.15
+kan.TimePosition = 0
+kan.PlaybackSpeed = 1.01
+kan.Pitch = 1.01
+kan.SoundId = "rbxassetid://1873219898" --525289865,1873219898,381991270
+kan.Name = "nepnepnep"
+kan.Looped = true
+kan:Play()
+
+local er = Instance.new("Sound",game.Players.LocalPlayer.Character.HumanoidRootPart)
+er.Volume = 1.15
+er.TimePosition = 0
+er.PlaybackSpeed = 1.01
+er.Pitch = 1.01
+er.SoundId = "rbxassetid://1873219898" --525289865,1873219898,381991270
+er.Name = "nepnepnep"
+er.Looped = true
+er:Play()
+
 pcall(function()
 game.Players.LocalPlayer.Character.BoomBox.Remote:FireServer("PlaySong",1873219898)
 game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.MaxDistance = 0
@@ -7,19 +26,6 @@ pcall(function()
 game.Players.LocalPlayer.Character.BoomBox.RemoteEvent:FireServer("1873219898")
 game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.MaxDistance = 0
 end)
-
---- Did actually rework heavily away from original neptunian, and the non-rework neptunian. --NoobyGames12
---- Was supposed to be for the770zone, or VengefulProgram.
-
-warn'Neptune/Neptunian V'
-warn[[Absolutely.
-
-Created by NoobyGames12
-----------------------------]]
-
-
-warn("Have fun using this!")
----- DO NOT CHANGE ANYTHING BELOW IF YOU'RE NOT AN EDITOR 
 
 cors = {}
 mas = Instance.new("Model",game:GetService("Lighting"))
@@ -5108,7 +5114,7 @@ SpecialMesh476.Parent = Part475
 SpecialMesh476.Scale = Vector3.new(0.349999994, 1.04999995, 0.5)
 SpecialMesh476.MeshType = Enum.MeshType.Brick
 for i,v in pairs(mas:GetChildren()) do
-	v.Parent = game:GetService("Players").LocalPlayer.Character.Dummy
+	v.Parent = getgenv().activeDummy
 	pcall(function() v:MakeJoints() end)
 end
 mas:Destroy()
@@ -7335,7 +7341,8 @@ end
 
 
 local attacktype = 1
-mouse.Button1Down:connect(function()
+mouse.KeyDown:connect(function(tr)
+	if tr == "q" then
 if equipped == true then
   if attack == false and attacktype == 1 then
     attacktype = 2
@@ -7350,6 +7357,7 @@ if equipped == true then
     attacktype = 1
     --attackfour()]]--
   end
+end
 end
 end)
 mouse.KeyDown:connect(function(k)
@@ -7374,7 +7382,6 @@ end
 end
 if k == "l" and muter == false then
 muter = true
-kan.Volume = 0
 elseif k == "l" and muter == true then
 muter = false
 kan.Volume = 1.25
@@ -7394,16 +7401,6 @@ kan.TimePosition = message:sub(8)
 end
 end)
 
-local kan = Instance.new("Sound",plr.PlayerGui)
-kan.Volume = 1.15
-kan.TimePosition = 0
-kan.PlaybackSpeed = 1.01
-kan.Pitch = 1.01
-kan.SoundId = "rbxassetid://1873219898" --525289865,1873219898,381991270
-kan.Name = "nepnepnep"
-kan.Looped = true
-kan:Play()
-
 
 idleanim=.4
 while true do
@@ -7411,7 +7408,7 @@ swait()
 if muter == false then
 kan.Volume = ORVOL
 else
-kan.Volume = 0
+--dont
 end
 kan.PlaybackSpeed = ORPIT
 kan.Pitch = ORPIT
