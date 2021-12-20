@@ -3,7 +3,7 @@ local LoadLibrary = game:GetObjects("rbxassetid://8299466510")[1]
 
 local plr = game.Players.LocalPlayer
 
-local char = plr.Character.RE.Dummy
+local char = getgenv().activeDummy
 local hum = char:FindFirstChildOfClass'Humanoid'
 local hed = char.Head
 local root = char:FindFirstChild'HumanoidRootPart'
