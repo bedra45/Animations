@@ -1,3 +1,12 @@
+pcall(function()
+game.Players.LocalPlayer.Character.BoomBox.Remote:FireServer("PlaySong",2743829704)
+game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.MaxDistance = 0
+end)
+pcall(function()
+game.Players.LocalPlayer.Character.BoomBox.RemoteEvent:FireServer("2743829704")
+game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.MaxDistance = 0
+end)
+
 local script = game:GetObjects("rbxassetid://8299470447")[1]
 local LoadLibrary = game:GetObjects("rbxassetid://8299466510")[1]
 
