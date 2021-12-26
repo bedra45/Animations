@@ -392,15 +392,6 @@ pcall(function()
 skybox.CFrame = skybox.CFrame * CFrame.fromEulerAnglesXYZ(0,math.rad(1),0)
 end)
 tecks.Position = UDim2.new(0,math.random(-3,3),0,math.random(-3,3))
-local jtrace = Instance.new("Part",game.Workspace)
-jtrace.Name = "JDTrace"
-jtrace.Size = Vector3.new(10,0,10)
-jtrace.Position = chara.Torso.Position
-jtrace.CFrame = chara.Torso.CFrame - Vector3.new(0,3,0)
-jtrace.Anchored = true
-jtrace.CanCollide = false
-jtrace.BrickColor = BrickColor.new("Really black")
-jtrace.Material = "Granite"
 game.Debris:AddItem(jtrace,1)
 end
 end
