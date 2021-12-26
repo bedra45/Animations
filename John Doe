@@ -388,7 +388,9 @@ if tools[i].ClassName == "HopperBin" then
 tools[i]:Destroy()
 end
 end
+pcall(function()
 skybox.CFrame = skybox.CFrame * CFrame.fromEulerAnglesXYZ(0,math.rad(1),0)
+end)
 tecks.Position = UDim2.new(0,math.random(-3,3),0,math.random(-3,3))
 local jtrace = Instance.new("Part",game.Workspace)
 jtrace.Name = "JDTrace"
