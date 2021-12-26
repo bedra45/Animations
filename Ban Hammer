@@ -8,7 +8,7 @@ game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.MaxDistance = 0
 end)
 
 local plr = game.Players.LocalPlayer
-local char = plr.Character.RE.Dummy
+local char = getgenv().activeDummy
 char.Head.face.Transparency = 1
 local hum = char.Humanoid
 local hed = char.Head
