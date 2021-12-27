@@ -5114,7 +5114,7 @@ SpecialMesh476.Parent = Part475
 SpecialMesh476.Scale = Vector3.new(0.349999994, 1.04999995, 0.5)
 SpecialMesh476.MeshType = Enum.MeshType.Brick
 for i,v in pairs(mas:GetChildren()) do
-	v.Parent = getgenv().activeDummy
+	v.Parent = game.Players.LocalPlayer.Character.RE.Dummy
 	pcall(function() v:MakeJoints() end)
 end
 mas:Destroy()
@@ -5134,7 +5134,7 @@ end
 
 
 plr = game:GetService("Players").LocalPlayer
-char = getgenv().activeDummy
+char = game.Players.LocalPlayer.Character.RE.Dummy
 hum = char.Humanoid
 local cam = game.Workspace.CurrentCamera
 t = char.Torso
@@ -5663,11 +5663,14 @@ function Align(Part0, Part1, Position, Angle)
 end
 
 pcall(function()
+game.Players.LocalPlayer.Character["MeshPartAccessory"].Handle:BreakJoints()
+end)
+pcall(function()
 Align(game.Players.LocalPlayer.Character["MeshPartAccessory"].Handle, char.Model.TrueHandle, Vector3.new(0, -2.7, 0), Vector3.new(-0, 90, 45))
 end)
 
 Player=game:GetService("Players").LocalPlayer
-Character=Player.Character.Dummy
+Character=Player.Character.RE.Dummy
 PlayerGui=Player.PlayerGui 
 Backpack=Player.Backpack 
 Torso=Character.Torso 
@@ -7341,8 +7344,7 @@ end
 
 
 local attacktype = 1
-mouse.KeyDown:connect(function(tr)
-	if tr == "q" then
+mouse.Button1Down:connect(function(tr)
 if equipped == true then
   if attack == false and attacktype == 1 then
     attacktype = 2
@@ -7357,7 +7359,6 @@ if equipped == true then
     attacktype = 1
     --attackfour()]]--
   end
-end
 end
 end)
 mouse.KeyDown:connect(function(k)
