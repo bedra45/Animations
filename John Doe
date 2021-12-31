@@ -315,6 +315,58 @@ end
 end
 else end
 end
+local function getRegion()
+	local range = 15
+	local closest;
+	local closestPlayer;
+	local localPlayer = game.Players.LocalPlayer
+	local Position = chara.HumanoidRootPart.Position
+	
+	for unused,v in pairs(game.Players:GetChildren()) do 
+		local otherPlayer = v.Character;
+		if otherPlayer:FindFirstChild("HumanoidRootPart") and v.Name ~= localPlayer.Name then 
+		local distance = (Position - otherPlayer.HumanoidRootPart.Position).magnitude
+		if not closest then 
+			if distance < range then 
+				closest = distance;
+				closestPlayer = v;
+			end
+			else
+			if (distance < closest) then 
+								closest = distance;
+				closestPlayer = v;
+			end
+		end
+	end
+		
+	end
+	return closestPlayer
+end
+
+local function DamageFling(Main)
+spawn(function()
+pcall(function()
+local Part
+if Main:IsA("Part") then
+     Part = Main
+else
+Part = Main.PrimaryPart
+  end
+
+local flingPart = getgenv().RealFlingPart
+
+local time2 = tick()
+
+while task.wait() do 
+if (tick() - time2) > 1 then 
+    flingPart = getgenv().activeDummy["Torso"].Position + Vector3.new(0,-50,0)
+    break
+end
+flingPart.Position = Part.Position + Vector3.new(0,0,0)
+end
+end)
+end)
+end
 
 --Button1Down--
 dell = false
@@ -323,6 +375,11 @@ if dell == false then
 dell = true
 swinganim:Play()
 bladeactive = true
+local enemy = getRegion()
+if enemy then 
+	
+	DamageFling(enemy.Character)
+end
 slashsnd:Play()
 wait(.7)
 bladeactive = false
