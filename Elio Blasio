@@ -191,8 +191,13 @@ end
 
 pcall(function()
 game.Players.LocalPlayer.Character["Type-49 Abomindation Back Accessory"].Handle:BreakJoints()
-Align(game.Players.LocalPlayer.Character["Type-49 Abomindation Back Accessory"].Handle, game.Players.LocalPlayer.Character.Dummy.Part, Vector3.new(0,0,-0.3), Vector3.new(-50, 90, -5.00896e-06))
+Align(game.Players.LocalPlayer.Character.Dummy["Type-49 Abomindation Back Accessory"].Handle, game.Players.LocalPlayer.Character.Dummy.Part, Vector3.new(0,0,-0.3), Vector3.new(-50, 90, -5.00896e-06))
 end)
+pcall(function()
+game.Players.LocalPlayer.Character["Type-49 Abomindation Back Accessory"].Handle:BreakJoints()
+Align(game.Players.LocalPlayer.Character.RE.Dummy["Type-49 Abomindation Back Accessory"].Handle, game.Players.LocalPlayer.Character.Dummy.Part, Vector3.new(0,0,-0.3), Vector3.new(-50, 90, -5.00896e-06))
+end)
+
 game.Players.LocalPlayer.Character.Dummy.Part.Transparency = 1
 game.Players.LocalPlayer.Character.Dummy.Part.Name = "Yes"
 game.Players.LocalPlayer.Character.Dummy.Part.Transparency = 1
