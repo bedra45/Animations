@@ -5114,7 +5114,7 @@ SpecialMesh476.Parent = Part475
 SpecialMesh476.Scale = Vector3.new(0.349999994, 1.04999995, 0.5)
 SpecialMesh476.MeshType = Enum.MeshType.Brick
 for i,v in pairs(mas:GetChildren()) do
-	v.Parent = game.Players.LocalPlayer.Character.RE.Dummy
+	v.Parent = getgenv().activeDummy
 	pcall(function() v:MakeJoints() end)
 end
 mas:Destroy()
@@ -5134,7 +5134,7 @@ end
 
 
 plr = game:GetService("Players").LocalPlayer
-char = game.Players.LocalPlayer.Character.RE.Dummy
+char = getgenv().activeDummy
 hum = char.Humanoid
 local cam = game.Workspace.CurrentCamera
 t = char.Torso
@@ -5666,10 +5666,10 @@ pcall(function()
 game.Players.LocalPlayer.Character["MeshPartAccessory"].Handle:BreakJoints()
 end)
 pcall(function()
-Align(game.Players.LocalPlayer.Character.Dummy["MeshPartAccessory"].Handle, char.Model.TrueHandle, Vector3.new(0, -2.7, 0), Vector3.new(-0, 90, 45))
+Align(getgenv().activeDummy["MeshPartAccessory"].Handle, char.Model.TrueHandle, Vector3.new(0, -2.7, 0), Vector3.new(-0, 90, 45))
 end)
 pcall(function()
-Align(game.Players.LocalPlayer.Character.RE.Dummy["MeshPartAccessory"].Handle, char.Model.TrueHandle, Vector3.new(0, -2.7, 0), Vector3.new(-0, 90, 45))
+Align(getgenv().activeDummy["MeshPartAccessory"].Handle, char.Model.TrueHandle, Vector3.new(0, -2.7, 0), Vector3.new(-0, 90, 45))
 end)
 
 Player=game:GetService("Players").LocalPlayer
