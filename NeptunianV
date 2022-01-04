@@ -5666,7 +5666,10 @@ pcall(function()
 game.Players.LocalPlayer.Character["MeshPartAccessory"].Handle:BreakJoints()
 end)
 pcall(function()
-Align(game.Players.LocalPlayer.Character["MeshPartAccessory"].Handle, char.Model.TrueHandle, Vector3.new(0, -2.7, 0), Vector3.new(-0, 90, 45))
+Align(game.Players.LocalPlayer.Character.Dummy["MeshPartAccessory"].Handle, char.Model.TrueHandle, Vector3.new(0, -2.7, 0), Vector3.new(-0, 90, 45))
+end)
+pcall(function()
+Align(game.Players.LocalPlayer.Character.RE.Dummy["MeshPartAccessory"].Handle, char.Model.TrueHandle, Vector3.new(0, -2.7, 0), Vector3.new(-0, 90, 45))
 end)
 
 Player=game:GetService("Players").LocalPlayer
