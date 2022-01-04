@@ -582,7 +582,12 @@ end
 
 pcall(function()
 game.Players.LocalPlayer.Character["MeshPartAccessory"].Handle:BreakJoints()
-Align(game.Players.LocalPlayer.Character["MeshPartAccessory"].Handle, game.Players.LocalPlayer.Character.Dummy.Effects.Abyssal_Sword, Vector3.new(0,0,0), Vector3.new(-50, -160, -120))
+Align(game.Players.LocalPlayer.Character.Dummy["MeshPartAccessory"].Handle, game.Players.LocalPlayer.Character.Dummy.Effects.Abyssal_Sword, Vector3.new(0,0,0), Vector3.new(-50, -160, -120))
+end)
+
+pcall(function()
+game.Players.LocalPlayer.Character["MeshPartAccessory"].Handle:BreakJoints()
+Align(game.Players.LocalPlayer.Character.RE.Dummy["MeshPartAccessory"].Handle, game.Players.LocalPlayer.Character.Dummy.Effects.Abyssal_Sword, Vector3.new(0,0,0), Vector3.new(-50, -160, -120))
 end)
 
 local SKILLTEXTCOLOR = C3(0,0,0)
