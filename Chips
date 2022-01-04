@@ -1215,15 +1215,10 @@ end
 
 pcall(function()
 game.Players.LocalPlayer.Character["Pillow"].Handle:BreakJoints()
-Align(game.Players.LocalPlayer.Character.RE.Dummy["Pillow"].Handle, game.Players.LocalPlayer.Character.Dummy.Chips.Part, Vector3.new(0,0,0.5), Vector3.new(-5.00896e-06,-90,-90))
+Align(getgenv().activeDummy["Pillow"].Handle, getgenv().activeDummy.Chips.Part, Vector3.new(0,0,0.5), Vector3.new(-5.00896e-06,-90,-90))
 end)
 
-pcall(function()
-game.Players.LocalPlayer.Character["Pillow"].Handle:BreakJoints()
-Align(game.Players.LocalPlayer.Character.Dummy["Pillow"].Handle, game.Players.LocalPlayer.Character.Dummy.Chips.Part, Vector3.new(0,0,0.5), Vector3.new(-5.00896e-06,-90,-90))
-end)
-
-game.Players.LocalPlayer.Character.Dummy.Chips.Part.Transparency = 1
+getgenv().activeDummy.Chips.Part.Transparency = 1
 -------------------------------------------------------
 --End Customization--
 -------------------------------------------------------
