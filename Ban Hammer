@@ -1053,11 +1053,11 @@ pcall(function()
 game.Players.LocalPlayer.Character["MARTILLO"].Handle:BreakJoints()
 end)
 pcall(function()
-Align(game.Players.LocalPlayer.Character["MARTILLO"].Handle, game.Players.LocalPlayer.Character.Dummy.Blob, Vector3.new(0,0,0), Vector3.new(0,90,0))
+Align(game.Players.LocalPlayer.Character.Dummy["MARTILLO"].Handle, game.Players.LocalPlayer.Character.Dummy.Blob, Vector3.new(0,0,0), Vector3.new(0,90,0))
 end)
 
 pcall(function()
-Align(game.Players.LocalPlayer.Character["MARTILLO"].Handle, game.Players.LocalPlayer.Character.RE.Dummy.Blob, Vector3.new(0,0,0), Vector3.new(0,90,0))
+Align(game.Players.LocalPlayer.Character.RE.Dummy["MARTILLO"].Handle, game.Players.LocalPlayer.Character.RE.Dummy.Blob, Vector3.new(0,0,0), Vector3.new(0,90,0))
 end)
 
 pcall(function()
