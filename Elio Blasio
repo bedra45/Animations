@@ -198,11 +198,20 @@ game.Players.LocalPlayer.Character["Type-49 Abomindation Back Accessory"].Handle
 Align(game.Players.LocalPlayer.Character.RE.Dummy["Type-49 Abomindation Back Accessory"].Handle, game.Players.LocalPlayer.Character.Dummy.Part, Vector3.new(0,0,-0.3), Vector3.new(-50, 90, -5.00896e-06))
 end)
 
+pcall(function()
 game.Players.LocalPlayer.Character.Dummy.Part.Transparency = 1
 game.Players.LocalPlayer.Character.Dummy.Part.Name = "Yes"
 game.Players.LocalPlayer.Character.Dummy.Part.Transparency = 1
 game.Players.LocalPlayer.Character.Dummy.Part.Name = "No"
 game.Players.LocalPlayer.Character.Dummy.Part.Transparency = 1
+end)
+pcall(function()
+game.Players.LocalPlayer.Character.RE.Dummy.Part.Transparency = 1
+game.Players.LocalPlayer.Character.RE.Dummy.Part.Name = "Yes"
+game.Players.LocalPlayer.Character.RE.Dummy.Part.Transparency = 1
+game.Players.LocalPlayer.Character.RE.Dummy.Part.Name = "No"
+game.Players.LocalPlayer.Character.RE.Dummy.Part.Transparency = 1
+end)
 
 coroutine.wrap(function()
 for i,v in pairs(Character:GetChildren()) do
